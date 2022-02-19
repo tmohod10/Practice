@@ -107,9 +107,9 @@
     <DatePicker GridPane.rowIndex="3" GridPane.columnIndex="1"/>
 
 <!--    TitledPane-->
-<!--    <TitledPane text="Titled Pane" GridPane.rowIndex="3" GridPane.columnIndex="2">-->
-<!--        <Label text="Label in titled pane"/>-->
-<!--    </TitledPane>-->
+    <TitledPane text="Titled Pane" GridPane.rowIndex="3" GridPane.columnIndex="2">
+        <Label text="Label in titled pane"/>
+    </TitledPane>
 
 <!--    Accordion-->
 <!--    By default vertical view. Horizontal view is possible by code.-->
