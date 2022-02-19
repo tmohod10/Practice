@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import java.lang.*?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml"
+          fx:controller="com.example.javafxcomponents.HelloController" hgap="10" vgap="10"
+          alignment="center">
+<!--    Icon on button-->
+    <Button GridPane.rowIndex="0" GridPane.columnIndex="0" text="Click me">
+        <graphic>
+            <ImageView>
+                <Image url="@icons/About24.gif"/>
+            </ImageView>
+        </graphic>
+    </Button>
+
+<!--    Icon on label-->
+    <Label GridPane.rowIndex="0" GridPane.columnIndex="1" text="This is a label"
+           textFill="blue" wrapText="true">
+        <font>
+            <Font name="Arial italic" size="12"/>
+        </font>
+        <graphic>
+            <ImageView>
+                <Image url="@icons/Information24.gif"/>
+            </ImageView>
+        </graphic>
+    </Label>
+
+<!--    RadioButton-->
+    <fx:define>
+        <ToggleGroup fx:id="colorToggleGroup"/>
+    </fx:define>
+    <VBox GridPane.rowIndex="0" GridPane.columnIndex="2">
+        <RadioButton text="Red" toggleGroup="$colorToggleGroup"/>
+        <RadioButton text="Blue" toggleGroup="$colorToggleGroup" selected="true"/>
+        <RadioButton text="Green" toggleGroup="$colorToggleGroup"/>
+    </VBox>
+
+<!--    CheckBox-->
+    <VBox GridPane.rowIndex="0" GridPane.columnIndex="3">
+        <CheckBox text="Dog"/>
+        <CheckBox text="Cat"/>
+        <CheckBox text="Bird"/>
+    </VBox>
+
+<!--    ToggleButton-->
+    <HBox GridPane.rowIndex="0" GridPane.columnIndex="4">
+        <ToggleButton text="Toggle Me" />
+        <ToggleButton text="Hello" />
+        <ToggleButton text="Good-Bye" />
+    </HBox>
+
+<!--    Input field-->
+    <TextField GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+
+<!--    Password field-->
+    <PasswordField GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+<!--    ComboBox or Drop-down menu-->
+    <ComboBox GridPane.rowIndex="1" GridPane.columnIndex="2" GridPane.columnSpan="2" editable="false">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="This is Option 1"/>
+                <String fx:value="This is Option 2"/>
+                <String fx:value="This is Option 3"/>
+                <String fx:value="This is Option 4"/>
+                <String fx:value="This is Option 5"/>
+            </FXCollections>
+        </items>
+        <value>
+            <String fx:value="This is Option 4"/>
+        </value>
+    </ComboBox>
+
+<!--    ChoiceBox (similar to ComboBox for small number of choices)-->
+    <ChoiceBox GridPane.rowIndex="1" GridPane.columnIndex="4">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="cb 1"/>
+                <String fx:value="cb 2"/>
+                <String fx:value="cb 3"/>
+                <String fx:value="cb 4"/>
+                <String fx:value="cb 5"/>
+            </FXCollections>
+        </items>
+    </ChoiceBox>
+
+<!--    Slider-->
+    <Slider GridPane.rowIndex="2" GridPane.columnIndex="0" GridPane.columnSpan="4" min="0" max="100"
+            showTickLabels="true" showTickMarks="true" minorTickCount="4" snapToTicks="true"/>
+
+<!--    Spinner-->
+    <Spinner GridPane.rowIndex="2" GridPane.columnIndex="4" min="0" max="100"
+             editable="true" initialValue="50"/>
+
+<!--    ColorPicker-->
+    <ColorPicker GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+
+<!--    DatePicker-->
+    <DatePicker GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+<!--    TitledPane-->
+<!--    <TitledPane text="Titled Pane" GridPane.rowIndex="3" GridPane.columnIndex="2">-->
+<!--        <Label text="Label in titled pane"/>-->
+<!--    </TitledPane>-->
+
+<!--    Accordion-->
+<!--    By default vertical view. Horizontal view is possible by code.-->
+    <Accordion GridPane.rowIndex="3" GridPane.columnIndex="2" GridPane.columnSpan="2"
+               expandedPane="$tp2">
+        <panes>
+            <TitledPane text="Titled Pane">
+                <Label text="Label in titled pane"/>
+            </TitledPane>
+            <TitledPane fx:id="tp2" text="Titled Pane 2">
+                <Label text="Label 2 in titled pane"/>
+            </TitledPane>
+            <TitledPane text="Titled Pane 3">
+                <Label text="Label 3 in titled pane"/>
+            </TitledPane>
+        </panes>
+    </Accordion>
+</GridPane>

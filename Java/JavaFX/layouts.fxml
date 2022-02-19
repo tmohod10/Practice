@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!--GridPane-->
+<GridPane xmlns:fx="http://javafx.com/fxml"
+          fx:controller="com.example.javafxcomponents.HelloController" hgap="10" vgap="10"
+          alignment="top_center" gridLinesVisible="true">
+        <columnConstraints>
+            <ColumnConstraints percentWidth="50.0"/>
+            <ColumnConstraints percentWidth="50.0"/>
+        </columnConstraints>
+    <padding>
+        <Insets top="10"/>
+    </padding>
+    <Button text="Button One" GridPane.rowIndex="0" GridPane.columnIndex="0"
+            GridPane.halignment="RIGHT"/>
+    <Button text="Button Two" GridPane.rowIndex="0" GridPane.columnIndex="1"
+        GridPane.valignment="TOP"/>
+    <Button text="Button Three" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <Button text="Really Long Button Four more text " GridPane.rowIndex="3" GridPane.columnIndex="0"
+        GridPane.columnSpan="2"/>
+    <Button text="Button Five" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+</GridPane>
+
+<!--HBox-->
+<HBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.javafxcomponents.HelloController" alignment="bottom_right"
+        style="-fx-border-color: red; -fx-border-width: 3; -fx-border-style: dashed;" spacing="10">
+    <padding>
+        <Insets bottom="10" right="10"/>
+    </padding>
+    <Button text="Okay" prefWidth="90"/>
+    <Button text="Cancel" prefWidth="90"/>
+    <Button text="Help" prefWidth="90"/>
+</HBox>
+
+<!--VBox-->
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.javafxcomponents.HelloController" alignment="bottom_right"
+      style="-fx-border-color: red; -fx-border-width: 3; -fx-border-style: dashed;" spacing="10">
+    <padding>
+        <Insets bottom="10" right="10"/>
+    </padding>
+    <Button text="Okay" prefWidth="90"/>
+    <Button text="Cancel" prefWidth="90"/>
+    <Button text="Help" prefWidth="90"/>
+</VBox>
+
+<!--BorderPane-->
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+        fx:controller="com.example.javafxcomponents.HelloController">
+    <top>
+        <Label text="This label is in the top position" alignment="CENTER"
+            BorderPane.alignment="CENTER"/>
+    </top>
+    <left>
+        <Label text="This label is in the left section" alignment="CENTER"
+               BorderPane.alignment="CENTER"/>
+    </left>
+    <right>
+        <Label text="This label is in the right section" alignment="CENTER"
+               BorderPane.alignment="CENTER"/>
+    </right>
+    <center>
+        <Button text="sadfas asasda asdasd asd asdasdasdasd asd asdasdas dasd"/>
+    </center>
+    <bottom>
+        <HBox spacing="10" alignment="TOP_RIGHT">
+            <padding>
+                <Insets bottom="10" right="10"/>
+            </padding>
+            <Button text="Okay" prefWidth="90"/>
+            <Button text="Cancel" prefWidth="90"/>
+            <Button text="Help" prefWidth="90"/>
+        </HBox>
+    </bottom>
+</BorderPane>
+
+
+<!--FlowPane-->
+<FlowPane xmlns:fx="http://javafx.com/fxml"
+          fx:controller="com.example.javafxcomponents.HelloController"
+        orientation="HORIZONTAL">
+    <Button text="Button One"/>
+    <Button text="Button Two"/>
+    <Button text="Button Three"/>
+    <Button text="Button Four"/>
+    <Button text="Button Five"/>
+    <Button text="Button Six"/>
+    <Button text="Button Seven"/>
+    <Button text="Button Eight"/>
+    <Button text="Button Nine"/>
+    <Button text="Button Ten"/>
+</FlowPane>
+
+<FlowPane xmlns:fx="http://javafx.com/fxml"
+          fx:controller="com.example.javafxcomponents.HelloController"
+          orientation="VERTICAL">
+    <Button text="Button One"/>
+    <Button text="Button Two"/>
+    <Button text="Button Three"/>
+    <Button text="Button Four"/>
+    <Button text="Button Five"/>
+    <Button text="Button Six"/>
+    <Button text="Button Seven"/>
+    <Button text="Button Eight"/>
+    <Button text="Button Nine"/>
+    <Button text="Button Ten"/>
+</FlowPane>
+
+<!--TiledPane-->
+<TilePane xmlns:fx="http://javafx.com/fxml"
+          fx:controller="com.example.javafxcomponents.HelloController">
+    <Button text="Button One"/>
+    <Button text="Button Two"/>
+    <Button text="Button Three"/>
+    <Button text="Button Four"/>
+    <Button text="Button Five"/>
+    <Button text="Button Six"/>
+    <Button text="Button Seven"/>
+    <Button text="Button Eight"/>
+    <Button text="Button Nine"/>
+    <Button text="Button Ten"/>
+</TilePane>
+
+<!--StackPane-->
+<StackPane xmlns:fx="http://javafx.com/fxml"
+          fx:controller="com.example.javafxcomponents.HelloController">
+    <Label text="The label text" style="-fx-background-color: green;"/>
+    <Button text="Button One" style="-fx-background-color: red"/>
+    <Label text="The second label text" style="-fx-background-color: blue"/>
+</StackPane>
