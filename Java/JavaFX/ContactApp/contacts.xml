@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contacts>
+<contact>
+	<first_name>asda</first_name>
+	<last_name>asd</last_name>
+	<phone_number>asd</phone_number>
+	<notes>asd</notes>
+</contact>
+<contact>
+	<first_name>sda</first_name>
+	<last_name>asdasd</last_name>
+	<phone_number>asdasd</phone_number>
+	<notes>asdasd</notes>
+</contact>
+<contact>
+	<first_name>rty456</first_name>
+	<last_name>rtyrt456</last_name>
+	<phone_number>rtyrty456</phone_number>
+	<notes>rtyrty456</notes>
+</contact>
+<contact>
+	<first_name>vbn</first_name>
+	<last_name>vbnvbnm</last_name>
+	<phone_number>nvbn</phone_number>
+	<notes>vbnvbn</notes>
+</contact>
+<contact>
+	<first_name>asdsd</first_name>
+	<last_name>asd</last_name>
+	<phone_number>asd</phone_number>
+	<notes>asdasdasd</notes>
+</contact>
+</contacts>
