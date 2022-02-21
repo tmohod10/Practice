@@ -7,8 +7,9 @@ public class Main {
 
     public static void main(String[] args) {
         String str = "I am a string. Yes I am.";
-        System.out.println(str);
+
         // Simplest form of regular expression is the string literal itself.
+        System.out.println(str);
 
         String yourString = str.replaceAll("I", "You");
         System.out.println(yourString);
@@ -30,9 +31,9 @@ public class Main {
 
         System.out.println("harry".replaceAll("[Hh]arry", "Harry"));
 
-        System.out.println(alphanumeric.replaceAll("[^ej]", "X"));
         // ^ when used inside square bracket will act as a negation regular expression matcher
         // outside the square bracket, the ^ will act as begin of the regular expression matcher
+        System.out.println(alphanumeric.replaceAll("[^ej]", "X"));
 
         System.out.println(alphanumeric.replaceAll("[abcdef345678]", "X"));
         System.out.println(alphanumeric.replaceAll("[a-f3-8]", "X")); // shortcut for line 34
@@ -41,7 +42,6 @@ public class Main {
         System.out.println(alphanumeric.replaceAll("(?i)[a-f3-8]", "X")); // ignore case
         // i is to ignore the ascii characters
         // to ignore case for unicode use (?iu)
-
 
         System.out.println(alphanumeric.replaceAll("[0-9]","X"));
         System.out.println(alphanumeric.replaceAll("\\d", "X")); // replaces all digits
@@ -56,7 +56,6 @@ public class Main {
         // Only tabs, spaces and newline character remains
 
         System.out.println(hasWhiteSpace.replaceAll("\\t", "")); // removes all tabs
-
 
         System.out.println(alphanumeric.replaceAll("\\w", "X"));
         System.out.println(hasWhiteSpace.replaceAll("\\w", "X")); // words are replaced
@@ -90,7 +89,7 @@ public class Main {
         System.out.println(matcher.matches());
 
         // matcher can only be used once
-        // if to be used again we need to reset the matcher
+        // if matcher is to be used again we need to reset the matcher
         matcher.reset();
 
         int count = 0;
@@ -203,6 +202,77 @@ public class Main {
         re7 = "^[a-z]+\\.\\d+";
         System.out.println("kjisl.22".matches(re7));
         System.out.println("f5.12a".matches(re7));
+
+        String c8 = "abcd.135uvqz.7tzik.999";
+
+        String re8 = "(\\d+)";
+        Pattern p8 = Pattern.compile(re8);
+        Matcher m8 = p8.matcher(c8);
+
+        count = 0;
+        while (m8.find()) {
+            count++;
+            System.out.println("Occurrence : " + count + " -> " + m8.group(1));
+        }
+
+        String c9 = "abcd.135\tuvqz.7\ttzik.999\n";
+        String re9 = "(\\d+)\\s"; // tab and space is considered as white space
+        Pattern p9 = Pattern.compile(re9);
+        Matcher m9 = p9.matcher(c9);
+
+        count = 0;
+        while (m9.find()) {
+            count++;
+            System.out.println("Occurrence : " + count + " -> " + m9.group(1));
+        }
+
+        String c10 = "abcd.135\tuvqz.7\ttzik.999\n";
+        String re10 = "(\\d+)\\s"; // tab and space is considered as white space
+        Pattern p10 = Pattern.compile(re10);
+        Matcher m10 = p9.matcher(c10);
+
+        count = 0;
+        while (m10.find()) {
+            count++;
+            System.out.println("Occurrence : start = " + m10.start(1) + " end = " + (m10.end(1) - 1));
+        }
+
+
+        String c11 = "{0, 2}, {0, 5}, {1, 3}, {2, 4}";
+        String re11 = "\\{(.+?)\\}";
+        Pattern p11 = Pattern.compile(re11);
+        Matcher m11 = p11.matcher(c11);
+
+        count = 0;
+        while (m11.find()) {
+            count++;
+            System.out.println("Occurrence : " + m11.group(1));
+        }
+
+
+        String c11a = "{0, 2}, {0, 5}, {1, 3}, {2, 4}, {x, y}, {11, 12}";
+        String re11a = "(\\{\\d+, \\d+\\})";
+        Pattern p11a = Pattern.compile(re11a);
+        Matcher m11a = p11a.matcher(c11a);
+
+        count = 0;
+        while (m11a.find()) {
+            count++;
+            System.out.println("Occurrence : " + m11a.group(1));
+        }
+
+        String c12 = "11111";
+        String re12 = "^\\d{5}$";
+        System.out.println(c12.matches(re12));
+
+
+        String c13 = "11111-1111";
+        String re13 = "^\\d{5}-\\d{4}$";
+        System.out.println(c13.matches(re13));
+
+        String c14 = "11111-3434";
+        String re14 = "^\\d{5}(-\\d{4})?$";
+        System.out.println(c14.matches(re14));
 
     }
 
