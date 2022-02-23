@@ -274,6 +274,19 @@ public class Main {
         String re14 = "^\\d{5}(-\\d{4})?$";
         System.out.println(c14.matches(re14));
 
+
+	String re15 = "\\bfoo\\b";
+        String sentence = "foo bar (foo) bar foo-bar foo_bar foo'bar bar-foo bar, foo.";
+
+        Pattern p15 = Pattern.compile(re15);
+        Matcher m15 = p15.matcher(sentence);
+
+        count = 0;
+        while(m15.find()) {
+            count++;
+        }
+        System.out.println(count);
+
     }
 
 }
